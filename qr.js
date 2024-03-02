@@ -6,7 +6,6 @@ const shareButton = document.querySelector('.share-button');
 const url = localStorage.getItem('url');
 
 
-
 // Create qr code
 const qrCode = new QRCode(qrCodeContainer, {
     width: 200,
@@ -17,7 +16,7 @@ const qrCode = new QRCode(qrCodeContainer, {
 
 // Create qr code
 function createQrCode(){
-    qrCode.makeCode('url');
+    qrCode.makeCode(`${url}`);
 }
 
 createQrCode();
